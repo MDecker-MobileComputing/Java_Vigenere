@@ -3,7 +3,7 @@ package de.mide.vigenere;
 
 /**
  * Ausführbare Klasse (siehe main-Methode) für Ver- und Entschlüsselung
- * mit der sog. Vigenere-Chiffre (symmetrisches Verschlüsselungsverfahren).
+ * mit der sog. Vigenère-Chiffre (symmetrisches Verschlüsselungsverfahren).
  * <br><br>
  *
  * This project is licensed under the terms of the BSD 3-Clause License.
