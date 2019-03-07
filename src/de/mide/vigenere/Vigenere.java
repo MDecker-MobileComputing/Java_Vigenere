@@ -19,7 +19,7 @@ public class Vigenere {
      * @return Chiffre
      */
     public static byte[] verschluesseln(String klartext, byte[] schluessel) {
-
+                
         byte[] klartextBytes = klartext.getBytes();
 
         int laengeKlartext   = klartextBytes.length;
@@ -27,9 +27,11 @@ public class Vigenere {
 
         byte[] chiffreBytes = new byte[laengeKlartext];
 
+        byte schluesselByte;
         for (int i=0; i < laengeKlartext; i++ ) {
-            byte schluesselByte = schluessel[i % laengeSchluessel];
-            chiffreBytes[i] = (byte)(klartextBytes[i] ^ schluesselByte);
+
+            schluesselByte  = schluessel[i % laengeSchluessel];
+            chiffreBytes[i] = (byte)(klartextBytes[i] ^ schluesselByte); // XOR-Verknüpfung
         }
 
         return chiffreBytes;
@@ -37,12 +39,13 @@ public class Vigenere {
 
 
     /**
-     * Methode zum Entschlüsseln der Chiffre, d.h. Wiedergewinnung des
-     * Klartexts.
+     * Methode zum Entschlüsseln der Chiffre, d.h. Wiedergewinnung des Klartexts. 
      *
      * @param chiffre  Chiffre, die entschlüsselt werden soll.
      * 
-     * @param schluessel  Kryptografischer Schlüssel (darf nicht leer sein).
+     * @param schluessel  Kryptografischer Schlüssel (darf nicht leer sein);
+     *                    muss derselbe Schlüssel sein, mit dem die Chiffre
+     *                    erzeugt wurde.
      * 
      * @return Klartext
      */
@@ -52,11 +55,12 @@ public class Vigenere {
         int laengeSchluessel = schluessel.length;
 
         byte[] klartextBytes = new byte[laengeChiffre];
-
-
+        
+        byte schluesselByte;
         for (int i=0; i < laengeChiffre; i++ ) {
-            byte schluesselByte = schluessel[i % laengeSchluessel];
-            klartextBytes[i] = (byte)(chiffre[i] ^ schluesselByte);
+
+            schluesselByte   = schluessel[i % laengeSchluessel];
+            klartextBytes[i] = (byte)(chiffre[i] ^ schluesselByte); // XOR-Verknüpfung
         }
 
         return new String(klartextBytes);

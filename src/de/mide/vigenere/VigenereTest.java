@@ -11,8 +11,8 @@ package de.mide.vigenere;
 public class VigenereTest {
 
     /**
-     * Einstiegs-Methode des Programms.
-     * <br>
+     * Einstiegs-Methode des Programms.<br>
+     * 
      * Ein String wird verschlüsselt und gleich danach wieder entschlüsselt.
      *
      * @param args  Wird nicht ausgewertet.
@@ -31,7 +31,7 @@ public class VigenereTest {
 
 
         // Schlüssel ändern => Entschlüsselung liefert nur noch Kauderwelsch
-        schluesselBytes[0] = (byte)0x23;
+        //schluesselBytes[0] = (byte)0x23;
 
 
         // Entschlüsseln
