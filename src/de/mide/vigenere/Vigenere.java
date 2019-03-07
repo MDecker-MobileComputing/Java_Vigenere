@@ -1,17 +1,21 @@
 package de.mide.vigenere;
 
 /**
- * Diese Klasse enthält je eine Methode um einen String mit dem Vigenere-Verfahren
- * zu ent- und verschlüsseln.
+ * Diese Klasse enthÃ¤lt je eine Methode um einen String mit dem Vigenere-Verfahren
+ * zu ent- und verschlÃ¼sseln.
+ * <br><br>
+ * 
+ * This project is licensed under the terms of the BSD 3-Clause License.
  */
 public class Vigenere {
 
-
     /**
-     * Methode zum Verschlüsseln eines Strings mit dem Vigenere-Verfahren.
+     * Methode zum VerschlÃ¼sseln eines Strings mit dem Vigenere-Verfahren.
      *
-     * @param klartext   Text, der verschlüsselt werden soll.
-     * @param schluessel Kryptografischer Schlüssel (darf nicht leer sein).
+     * @param klartext  Text, der verschlÃ¼sselt werden soll.
+     * 
+     * @param schluessel  Kryptografischer SchlÃ¼ssel (darf nicht leer sein).
+     * 
      * @return Chiffre
      */
     public static byte[] verschluesseln(String klartext, byte[] schluessel) {
@@ -33,12 +37,14 @@ public class Vigenere {
 
 
     /**
-     * Methode zum Entschlüsseln der Chiffre, d.h. Wiedergewinnung des
+     * Methode zum EntschlÃ¼sseln der Chiffre, d.h. Wiedergewinnung des
      * Klartexts.
      *
-     * @param chiffre    Chiffre, die entschlüsselt werden soll.
-     * @param schluessel Kryptografischer Schlüssel (darf nicht leer sein).
-     * @return           Klartext.
+     * @param chiffre  Chiffre, die entschlÃ¼sselt werden soll.
+     * 
+     * @param schluessel  Kryptografischer SchlÃ¼ssel (darf nicht leer sein).
+     * 
+     * @return Klartext
      */
     public static String entschluesseln(byte[] chiffre, byte[] schluessel) {
 
